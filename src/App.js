@@ -1,25 +1,22 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import ClosedPokedex from './pages/closed-pokedex/closed-pokedex.component';
+import OpenedPokedex from './pages/opened-pokedex/opened-pokedex.component';
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <Switch>
+          <Route exact path='/' component={ClosedPokedex} />
+          <Route path='/pokemon' component={OpenedPokedex} />
+        </Switch>
+      </div>
+    );
+  }
 }
 
-export default App;
+
+export default (App);
