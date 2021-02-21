@@ -1,5 +1,5 @@
 import React from 'react';
-// import { withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 import {
   ListItemContainer,
@@ -7,13 +7,13 @@ import {
   ContentNumber,
 } from './list-item.styles';
 
-const ListItem = ({ entry_number, pokemon_species, match }) => (
+const ListItem = ({ entry_number, pokemon_species, history }) => (
   <ListItemContainer
-    onClick={() => console.log('Clicked pokemon', entry_number)}
+    onClick={() => history.push(`/pokemon/${entry_number}`)}
   >
 		<ContentNumber># { entry_number }</ContentNumber>
 		<ContentName>{ pokemon_species.name.toUpperCase()}</ContentName>
   </ListItemContainer>
 );
 
-export default ListItem;
+export default withRouter(ListItem);

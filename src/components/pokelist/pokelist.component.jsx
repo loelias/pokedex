@@ -10,10 +10,9 @@ import { PokeListContainer } from './pokelist.styles'
 
 const PokeList = ({ data }) => (
   <PokeListContainer>
-      
-      {data.map((dataObject) => (
-          <ListItem key={dataObject.entry_number} {...dataObject} />
-      ))}
+    {data.map((dataObject) => (
+        <ListItem key={dataObject.entry_number} {...dataObject} />
+    ))}
   </PokeListContainer>
 );
 
