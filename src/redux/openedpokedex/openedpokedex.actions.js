@@ -2,7 +2,7 @@ import OpenedPokedexActionTypes from './openedpokedex.types';
 
 import axios from 'axios';
 
-const DETAILS_API_URL = `https://pokeapi.co/api/v2/pokemon/1`;
+const DETAILS_API_URL = `https://pokeapi.co/api/v2/pokemon/`;
 
 export const fetchDetailsDataStart = () => ({
   type: OpenedPokedexActionTypes.FETCH_DETAILSDATA_START
@@ -23,12 +23,12 @@ export const setOnMouseOverImage = value => ({
   payload: value
 })
 
-export const fetchDetailsDataStartAsync = () => {
+export const fetchDetailsDataStartAsync = (value) => {
   return dispatch => {
     dispatch(fetchDetailsDataStart());
 
     axios
-      .get(DETAILS_API_URL)
+      .get(DETAILS_API_URL + value)
 		  .then( res => {
 			  const apiData = res.data;
 			  dispatch(fetchDetailsDataSuccess(apiData));

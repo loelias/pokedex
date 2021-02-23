@@ -5,9 +5,8 @@ export const OpenedPokedexInterfaceContainer = styled.div`
   height: 600px;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   margin-top: 20px;
-  border-style: solid;
 `;

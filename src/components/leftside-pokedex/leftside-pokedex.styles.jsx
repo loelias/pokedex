@@ -9,4 +9,5 @@ export const LeftSidePokedexInterfaceContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   background-color: red;
+  border: 2px solid black;
 `;

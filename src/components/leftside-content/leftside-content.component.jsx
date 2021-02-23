@@ -1,9 +1,5 @@
 import {React } from 'react';
-import { connect, useSelector, useDispatch } from "react-redux";
-
-
-// import { createStructuredSelector } from "reselect";
-// import { withRouter } from 'react-router-dom';
+import { useSelector, useDispatch } from "react-redux";
 
 import { selectDetailsData ,selectIsHoveringImage } from "../../redux/openedpokedex/openedpokedex.selectors";
 import { setOnMouseOverImage } from "../../redux/openedpokedex/openedpokedex.actions";
@@ -22,7 +18,7 @@ import {
 export default function LeftSideContent() {
 
 	const isHoveringImage = useSelector(selectIsHoveringImage);
-	const {id, abilities, height, name, sprites, types, stats, weight} = useSelector(selectDetailsData, [isHoveringImage]);
+	const {id, height, name, sprites, types, weight} = useSelector(selectDetailsData, [isHoveringImage]);
 	
 	const dispatch = useDispatch();
 
@@ -39,6 +35,8 @@ export default function LeftSideContent() {
 	const imageOnHover = (value) => {
 		dispatch(setOnMouseOverImage(value));
 	};
+
+	// function abilitiesMap()
 
 
 	return (
@@ -67,9 +65,9 @@ export default function LeftSideContent() {
 				<TypeContent>
 					TYPES
 				</TypeContent>
-				{abilities && abilities.map((abilityObject) => (
-					<TypeContent key={abilityObject.slot}{...abilityObject}>
-						{abilityObject.ability.name.toUpperCase()}
+				{types && types.map(typeObject => (
+					<TypeContent key={typeObject.slot}{...typeObject}>
+						{typeObject.type.name.toUpperCase()}
 					</TypeContent>
 				))}
       </TypesContainer>

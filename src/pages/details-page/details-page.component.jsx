@@ -11,8 +11,7 @@ class DetailsPage extends React.Component {
 
   componentDidMount() {
     const { fetchDetailsDataStartAsync } = this.props;
-
-    fetchDetailsDataStartAsync();
+    fetchDetailsDataStartAsync(this.props.match.params.pokemonId);
   }
 
   render() {
@@ -25,7 +24,7 @@ class DetailsPage extends React.Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-  fetchDetailsDataStartAsync: () => dispatch(fetchDetailsDataStartAsync())
+  fetchDetailsDataStartAsync: (value) => dispatch(fetchDetailsDataStartAsync(value))
 })
 
 export default connect(null, mapDispatchToProps)(DetailsPage);
