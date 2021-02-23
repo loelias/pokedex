@@ -12,5 +12,3 @@ export const ClosedPokedexInterfaceContainer = styled.div`
   border-style: solid;
   background-color: red;
 `;
-
-export const TesteList = styled.p``;

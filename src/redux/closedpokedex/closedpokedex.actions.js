@@ -23,7 +23,7 @@ export const fetchDataStartAsync = () => {
     dispatch(fetchDataStart());
 
     axios
-    	.get(`https://pokeapi.co/api/v2/pokedex/1`)
+    	.get(POKEMON_API_URL)
 			.then( res => {
 				const apiData = res.data.pokemon_entries;
 				dispatch(fetchDataSuccess(apiData));
