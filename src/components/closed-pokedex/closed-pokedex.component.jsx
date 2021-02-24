@@ -1,9 +1,9 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { useHistory } from "react-router-dom";
 
 import PokeList from "../../components/pokelist/pokelist.component";
 import Pagination from "../../components/pagination/pagination.component";
+import pokedexLogo from "../../assets/retropokedex.png";
 
 import {
   selectData,
@@ -16,6 +16,7 @@ import {
   PokedexTopHeaderContainer,
   PokedexBigCircleElement,
   PokedexInnerCircleElement,
+  PokedexImageHeader,
 } from "./closed-pokedex.styles";
 
 export default function ClosedPokedex() {
@@ -24,7 +25,6 @@ export default function ClosedPokedex() {
   const currentPage = useSelector(selectCurrentPage);
 
   const dispatch = useDispatch();
-  const history = useHistory();
 
   const indexOfLastPokemon = currentPage * itemsPerPage;
   const indexOfFirstPokemon = indexOfLastPokemon - itemsPerPage;
@@ -33,16 +33,13 @@ export default function ClosedPokedex() {
     indexOfLastPokemon
   );
 
-  function handleClick() {
-    history.push("/");
-  }
-
   return (
     <ClosedPokedexInterfaceContainer>
       <PokedexTopHeaderContainer>
         <PokedexBigCircleElement>
-          <PokedexInnerCircleElement onClick={handleClick} />
+          <PokedexInnerCircleElement />
         </PokedexBigCircleElement>
+        <PokedexImageHeader className="image" imageUrl={pokedexLogo} />
       </PokedexTopHeaderContainer>
       <PokeList data={currentItems} />
       <Pagination />

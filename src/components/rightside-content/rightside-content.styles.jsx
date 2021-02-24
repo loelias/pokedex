@@ -22,6 +22,7 @@ export const CloseContainer = styled.div`
   border-radius: 50px;
   margin-bottom: 1px;
   font-size: 20px;
+  box-shadow: 1px 1px 10px black;
 
   &:hover {
     cursor: pointer;
@@ -38,6 +39,7 @@ export const AbilitiesContainer = styled.div`
   justify-content: space-around;
   background-color: green;
   border: 2px solid black;
+  box-shadow: 1px 1px 10px black;
 `;
 
 export const BaseStatsContainer = styled.div`
@@ -51,6 +53,7 @@ export const BaseStatsContainer = styled.div`
   justify-content: space-around;
   background-color: green;
   border: 2px solid black;
+  box-shadow: 1px 1px 10px black;
 `;
 
 export const DescriptionContainer = styled.div`
@@ -90,10 +93,18 @@ export const AbilitiesContent = styled.span`
 export const BaseStatsContent = styled.span`
   display: flex;
   text-align: center;
-  margin: 30px 10px 0 10px;
+  margin: 0px 10px 0 10px;
   font-family: "DotGothic16", sans-serif;
   text-shadow: 2px 2px 1px #2e5413;
   font-weight: bold;
+
+  &:first-child {
+    display: flex;
+    flex-basis: 100%;
+    flex-direction: column;
+    align-self: flex-start;
+    text-decoration: underline;
+  }
 `;
 
 export const DescriptionContent = styled.p`

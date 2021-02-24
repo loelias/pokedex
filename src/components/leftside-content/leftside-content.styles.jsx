@@ -22,6 +22,7 @@ export const NameNumberContainer = styled.div`
   justify-content: space-between;
   background: linear-gradient(to bottom, white 80%, #cccccc 20%);
   border: 15px solid grey;
+  box-shadow: 0px 0px 20px black;
 `;
 
 export const TypesContainer = styled.div`
@@ -35,6 +36,7 @@ export const TypesContainer = styled.div`
   justify-content: space-around;
   background-color: green;
   border: 2px solid black;
+  box-shadow: 1px 1px 10px black;
 `;
 
 export const PhysicalContainer = styled.div`
@@ -49,6 +51,7 @@ export const PhysicalContainer = styled.div`
   justify-content: space-around;
   background-color: green;
   border: 2px solid black;
+  box-shadow: 1px 1px 10px black;
 `;
 
 export const BackgroundImage = styled.div`
@@ -120,18 +123,40 @@ export const PokedexBigCircleElement = styled.div`
   width: 50px;
   height: 50px;
   background-color: white;
+  margin: 10px 0px 0px 30px;
   margin-left: 30px;
   border-radius: 50px;
 `;
 
 export const PokedexInnerCircleElement = styled.div`
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+  font-weight: bold;
+  color: grey;
   width: 90%;
   height: 90%;
-  background-color: lightblue;
+  background-color: lightgreen;
   border-radius: 50px;
 
   &:hover {
     cursor: pointer;
+    color: green;
   }
+`;
+
+export const PokedexImageHeader = styled.div`
+  width: 300px;
+  height: 100px;
+  display: flex;
+  flex-direction; row;
+  margin-top: -5px;
+  margin-left: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: flex-end;
+  background-size: 300px 80px;
+  background-image: ${({ imageUrl }) => `url(${imageUrl})`};
 `;

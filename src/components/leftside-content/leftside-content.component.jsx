@@ -8,6 +8,8 @@ import {
 } from "../../redux/openedpokedex/openedpokedex.selectors";
 import { setOnMouseOverImage } from "../../redux/openedpokedex/openedpokedex.actions";
 
+import pokedexLogo from "../../assets/retropokedex.png";
+
 import {
   LeftDetailsContentContainer,
   BackgroundImage,
@@ -20,6 +22,7 @@ import {
   PokedexTopHeaderContainer,
   PokedexBigCircleElement,
   PokedexInnerCircleElement,
+  PokedexImageHeader,
 } from "./leftside-content.styles";
 
 export default function LeftSideContent() {
@@ -58,8 +61,11 @@ export default function LeftSideContent() {
     <LeftDetailsContentContainer>
       <PokedexTopHeaderContainer>
         <PokedexBigCircleElement>
-          <PokedexInnerCircleElement onClick={handleClick} />
+          <PokedexInnerCircleElement onClick={handleClick}>
+            &lArr;
+          </PokedexInnerCircleElement>
         </PokedexBigCircleElement>
+        <PokedexImageHeader className="image" imageUrl={pokedexLogo} />
       </PokedexTopHeaderContainer>
       <NameNumberContainer>
         <BackgroundImage

@@ -35,4 +35,8 @@ export const PaginationButton = styled.div`
   &:hover {
     cursor: pointer;
   }
+
+  &.active {
+    background-color: green;
+  }
 `;

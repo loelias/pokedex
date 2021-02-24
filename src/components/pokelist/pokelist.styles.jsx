@@ -12,4 +12,5 @@ export const PokeListContainer = styled.div`
   border: 15px solid black;
   background-color: lightgrey;
   border-radius: 10px;
+  box-shadow: 2px 2px 4px black;
 `;

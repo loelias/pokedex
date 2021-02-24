@@ -6,6 +6,7 @@ import {
   selectData,
   selectItemsPerPage,
   selectPageNumbers,
+  selectCurrentPage,
 } from "../../redux/closedpokedex/closedpokedex.selectors";
 
 import { PaginationContainer, PaginationButton } from "./pagination.styles";
@@ -14,6 +15,7 @@ export default function Pagination() {
   const itemsPerPage = useSelector(selectItemsPerPage);
   const pokemonData = useSelector(selectData);
   const pageNumbers = useSelector(selectPageNumbers);
+  const currentPage = useSelector(selectCurrentPage);
   const dispatch = useDispatch();
 
   if (pageNumbers.length == 0) {
@@ -28,11 +30,21 @@ export default function Pagination() {
 
   return (
     <PaginationContainer>
-      {pageNumbers.map((number) => (
-        <PaginationButton key={number} onClick={handleClick}>
-          {number}
-        </PaginationButton>
-      ))}
+      {pageNumbers.map((number) =>
+        number == currentPage ? (
+          <PaginationButton
+            className="active"
+            key={number}
+            onClick={handleClick}
+          >
+            {number}
+          </PaginationButton>
+        ) : (
+          <PaginationButton key={number} onClick={handleClick}>
+            {number}
+          </PaginationButton>
+        )
+      )}
     </PaginationContainer>
   );
 }
