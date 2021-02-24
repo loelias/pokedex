@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# A Retro Pokedex Device application using React and Redux
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project uses reactjs, redux and their functions to create an interactive retro pokedex device from the famous cartoon Pokemon.
 
 ## Available Scripts
 
