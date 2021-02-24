@@ -28,10 +28,10 @@ export const PokedexBigCircleElement = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
+  width: 51px;
+  height: 49px;
   background-color: white;
-  margin: 10px 0px 0px 30px;
+  margin: 10px 0px 0px 20px;
   border-radius: 50px;
 `;
 
@@ -41,18 +41,19 @@ export const PokedexInnerCircleElement = styled.div`
   height: 90%;
   background-color: lightblue;
   border-radius: 50px;
+  margin-left: 1px;
 `;
 
 export const PokedexImageHeader = styled.div`
   width: 300px;
-  height: 100px;
+  height: 80px;
+  margin-left: 20px;
   display: flex;
   flex-direction; row;
-  margin-top: -5px;
-  margin-left: 10px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: flex-end;
-  background-size: 300px 80px;
+  background-size: 200px 40px;
   background-image: ${({ imageUrl }) => `url(${imageUrl})`};
+  background-position: right center;
 `;

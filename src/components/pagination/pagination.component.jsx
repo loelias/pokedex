@@ -30,21 +30,15 @@ export default function Pagination() {
 
   return (
     <PaginationContainer>
-      {pageNumbers.map((number) =>
-        number == currentPage ? (
-          <PaginationButton
-            className="active"
-            key={number}
-            onClick={handleClick}
-          >
-            {number}
-          </PaginationButton>
-        ) : (
-          <PaginationButton key={number} onClick={handleClick}>
-            {number}
-          </PaginationButton>
-        )
-      )}
+      {pageNumbers.map((number) => (
+        <PaginationButton
+          className={number == currentPage ? "active" : ""}
+          key={number}
+          onClick={handleClick}
+        >
+          {number}
+        </PaginationButton>
+      ))}
     </PaginationContainer>
   );
 }

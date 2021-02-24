@@ -1,13 +1,13 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const LeftDetailsContentContainer = styled.div`
-	width: 400px;
-	height: 600px;
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+  width: 400px;
+  height: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const NameNumberContainer = styled.div`
@@ -70,12 +70,12 @@ export const BackgroundImage = styled.div`
 `;
 
 export const TypeContent = styled.span`
-	display: flex;
-  font-family: 'DotGothic16', sans-serif;
+  display: flex;
+  font-family: "DotGothic16", sans-serif;
   font-weight: bold;
 
   &:first-child {
-    text-shadow: 2px 2px 1px #2E5413;
+    text-shadow: 2px 2px 1px #2e5413;
   }
 
   &:not(:first-child) {
@@ -83,7 +83,7 @@ export const TypeContent = styled.span`
     font-size: 18px;
     padding: 7px;
     border-radius: 10px;
-    border: 1px solid black
+    border: 1px solid black;
   }
 
   &:last-child {
@@ -92,15 +92,15 @@ export const TypeContent = styled.span`
 `;
 
 export const PhysicalContent = styled.span`
-	display: flex;
-  font-family: 'DotGothic16', sans-serif;
-  text-shadow: 2px 2px 1px #2E5413;
+  display: flex;
+  font-family: "DotGothic16", sans-serif;
+  text-shadow: 2px 2px 1px #2e5413;
   font-weight: bold;
 `;
 
 export const PokemonContent = styled.span`
-	display: flex;
-  font-family: 'VT323', monospace;
+  display: flex;
+  font-family: "VT323", monospace;
   font-weight: bold;
   font-size: 20px;
   letter-spacing: 4px;
@@ -120,11 +120,11 @@ export const PokedexBigCircleElement = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
+  width: 51px;
+  height: 49px;
   background-color: white;
   margin: 10px 0px 0px 30px;
-  margin-left: 30px;
+  margin-left: 20px;
   border-radius: 50px;
 `;
 
@@ -135,28 +135,29 @@ export const PokedexInnerCircleElement = styled.div`
   justify-content: center;
   font-size: 35px;
   font-weight: bold;
-  color: grey;
+  color: white;
   width: 90%;
   height: 90%;
-  background-color: lightgreen;
+  background-color: #ff4d4d;
   border-radius: 50px;
+  margin-left: 1px;
 
   &:hover {
     cursor: pointer;
-    color: green;
+    color: grey;
   }
 `;
 
 export const PokedexImageHeader = styled.div`
   width: 300px;
-  height: 100px;
+  height: 80px;
+  margin-left: 20px;
   display: flex;
   flex-direction; row;
-  margin-top: -5px;
-  margin-left: 10px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: flex-end;
-  background-size: 300px 80px;
+  background-size: 200px 40px;
   background-image: ${({ imageUrl }) => `url(${imageUrl})`};
+  background-position: right center;
 `;
