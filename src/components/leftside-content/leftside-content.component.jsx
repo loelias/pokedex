@@ -1,12 +1,15 @@
-import {React } from 'react';
+import { React } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { useHistory } from 'react-router-dom';
+import { useHistory } from "react-router-dom";
 
-import { selectDetailsData ,selectIsHoveringImage } from "../../redux/openedpokedex/openedpokedex.selectors";
+import {
+  selectDetailsData,
+  selectIsHoveringImage,
+} from "../../redux/openedpokedex/openedpokedex.selectors";
 import { setOnMouseOverImage } from "../../redux/openedpokedex/openedpokedex.actions";
 
 import {
-	LeftDetailsContentContainer,
+  LeftDetailsContentContainer,
   BackgroundImage,
   NameNumberContainer,
   TypesContainer,
@@ -14,82 +17,81 @@ import {
   PhysicalContainer,
   PhysicalContent,
   PokemonContent,
-	PokedexTopHeaderContainer,
-	PokedexBigCircleElement,
-	PokedexInnerCircleElement
-} from './leftside-content.styles';
+  PokedexTopHeaderContainer,
+  PokedexBigCircleElement,
+  PokedexInnerCircleElement,
+} from "./leftside-content.styles";
 
 export default function LeftSideContent() {
-
-	const isHoveringImage = useSelector(selectIsHoveringImage);
-	const {id, height, name, sprites, types, weight} = useSelector(selectDetailsData, [isHoveringImage]);
+  const isHoveringImage = useSelector(selectIsHoveringImage);
+  const {
+    id,
+    height,
+    name,
+    sprites,
+    types,
+    weight,
+  } = useSelector(selectDetailsData, [isHoveringImage]);
   const history = useHistory();
-	
-	const dispatch = useDispatch();
-	
 
-	const handleMouseEnter = (event) => {
-		event.target.classList.add("hover");
-		imageOnHover(true);
+  const dispatch = useDispatch();
+
+  const handleMouseEnter = (event) => {
+    event.target.classList.add("hover");
+    imageOnHover(true);
   };
 
-	const handleMouseLeave = (event) => {
-		event.target.classList.remove("hover");
-		imageOnHover(false);
+  const handleMouseLeave = (event) => {
+    event.target.classList.remove("hover");
+    imageOnHover(false);
   };
 
-	const imageOnHover = (value) => {
-		dispatch(setOnMouseOverImage(value));
-	};
+  const imageOnHover = (value) => {
+    dispatch(setOnMouseOverImage(value));
+  };
 
-	function handleClick() {
-    history.push('/');
+  function handleClick() {
+    history.push("/");
   }
 
-
-	return (
+  return (
     <LeftDetailsContentContainer>
-			<PokedexTopHeaderContainer>
-				<PokedexBigCircleElement>
-					<PokedexInnerCircleElement
-						onClick={handleClick}
-					/>
-				</PokedexBigCircleElement>
-			</PokedexTopHeaderContainer>
+      <PokedexTopHeaderContainer>
+        <PokedexBigCircleElement>
+          <PokedexInnerCircleElement onClick={handleClick} />
+        </PokedexBigCircleElement>
+      </PokedexTopHeaderContainer>
       <NameNumberContainer>
         <BackgroundImage
           className="image"
-					onMouseEnter={handleMouseEnter}
-					onMouseLeave={handleMouseLeave}
-					imageUrl={ 
-							!sprites ? 
-								"" : 
-								isHoveringImage ? sprites.back_default :
-									sprites.front_default } 
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          imageUrl={
+            !sprites
+              ? ""
+              : isHoveringImage
+              ? sprites.back_default
+              : sprites.front_default
+          }
         />
 
-        <PokemonContent>
-					{name ? name.toUpperCase() : ""}
-				</PokemonContent>
-				<PokemonContent>
-					POKEDEX #{id}
-				</PokemonContent>
+        <PokemonContent>{name ? name.toUpperCase() : ""}</PokemonContent>
+        <PokemonContent>POKEDEX #{id}</PokemonContent>
       </NameNumberContainer>
 
       <TypesContainer>
-				<TypeContent>
-					TYPES
-				</TypeContent>
-				{types && types.map(typeObject => (
-					<TypeContent key={typeObject.slot}{...typeObject}>
-						{typeObject.type.name.toUpperCase()}
-					</TypeContent>
-				))}
+        <TypeContent>TYPES</TypeContent>
+        {types &&
+          types.map((typeObject) => (
+            <TypeContent key={typeObject.slot} {...typeObject}>
+              {typeObject.type.name.toUpperCase()}
+            </TypeContent>
+          ))}
       </TypesContainer>
 
       <PhysicalContainer>
-        <PhysicalContent>Height: { height * 10 } cm</PhysicalContent>
-        <PhysicalContent>Weight: { weight / 10 } kg</PhysicalContent>
+        <PhysicalContent>Height: {height * 10} cm</PhysicalContent>
+        <PhysicalContent>Weight: {weight / 10} kg</PhysicalContent>
       </PhysicalContainer>
     </LeftDetailsContentContainer>
   );

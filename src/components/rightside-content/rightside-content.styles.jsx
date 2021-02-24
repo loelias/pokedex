@@ -1,23 +1,23 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const RightDetailsContentContainer = styled.div`
-	width: 400px;
-	height: 100%;
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-around;
+  width: 400px;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 `;
 
 export const CloseContainer = styled.div`
-	width: 20px;
-	height: 20px;
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: grey;
   border-radius: 50px;
   margin-bottom: 1px;
@@ -67,11 +67,11 @@ export const DescriptionContainer = styled.div`
 
 export const AbilitiesContent = styled.span`
   display: flex;
-  font-family: 'DotGothic16', sans-serif;
+  font-family: "DotGothic16", sans-serif;
   font-weight: bold;
 
   &:first-child {
-    text-shadow: 2px 2px 1px #2E5413;
+    text-shadow: 2px 2px 1px #2e5413;
   }
 
   &:not(:first-child) {
@@ -79,7 +79,7 @@ export const AbilitiesContent = styled.span`
     font-size: 18px;
     padding: 7px;
     border-radius: 10px;
-    border: 1px solid black
+    border: 1px solid black;
   }
 
   &:last-child {
@@ -88,14 +88,14 @@ export const AbilitiesContent = styled.span`
 `;
 
 export const BaseStatsContent = styled.span`
-	display: flex;
+  display: flex;
   text-align: center;
   margin: 30px 10px 0 10px;
-  font-family: 'DotGothic16', sans-serif;
-  text-shadow: 2px 2px 1px #2E5413;
+  font-family: "DotGothic16", sans-serif;
+  text-shadow: 2px 2px 1px #2e5413;
   font-weight: bold;
 `;
 
 export const DescriptionContent = styled.p`
-	display: flex;
+  display: flex;
 `;

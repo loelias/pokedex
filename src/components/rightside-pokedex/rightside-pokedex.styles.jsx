@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const RightSidePokedexInterfaceContainer = styled.div`
   width: 400px;

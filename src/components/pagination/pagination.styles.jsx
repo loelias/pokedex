@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const PaginationContainer = styled.div`
   width: 80%;
@@ -17,22 +17,22 @@ export const PaginationContainer = styled.div`
 `;
 
 export const PaginationButton = styled.div`
-    width: 20px;
-    height: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    background-color: #0066ff;
-    border-radius: 10px;
-    text-weigth: 900;
-    color: white;
-    margin: 2px 0 2px 0;
-    font-family: 'VT323', monospace;
-    box-shadow: 1px 1px 1px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  background-color: #0066ff;
+  border-radius: 10px;
+  text-weigth: 900;
+  color: white;
+  margin: 2px 0 2px 0;
+  font-family: "VT323", monospace;
+  box-shadow: 1px 1px 1px;
 
-    &:hover {
-        cursor: pointer;
-    }
+  &:hover {
+    cursor: pointer;
+  }
 `;

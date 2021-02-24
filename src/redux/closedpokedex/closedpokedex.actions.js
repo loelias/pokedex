@@ -33,11 +33,11 @@ export const fetchDataStartAsync = () => {
     dispatch(fetchDataStart());
 
     axios
-    	.get(POKEMON_API_URL)
-			.then( res => {
-				const apiData = res.data.pokemon_entries;
-				dispatch(fetchDataSuccess(apiData));
-			})
-			.catch(error => dispatch(fetchDataFailure(error.message)));
+      .get(POKEMON_API_URL)
+      .then(res => {
+        const apiData = res.data.pokemon_entries;
+        dispatch(fetchDataSuccess(apiData));
+      })
+      .catch(error => dispatch(fetchDataFailure(error.message)));
   };
 };

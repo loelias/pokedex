@@ -26,10 +26,10 @@ const openedPokedexReducer = (state = INITIAL_STATE, action) => {
         isFetching: false,
         errorMessage: action.payload
       };
-    case OpenedPokedexActionTypes.SET_ONMOUSEOVER_ACTION :
+    case OpenedPokedexActionTypes.SET_ONMOUSEOVER_ACTION:
       return {
-				...state,
-				isHoveringImage: action.payload,
+        ...state,
+        isHoveringImage: action.payload,
       };
     default:
       return state;

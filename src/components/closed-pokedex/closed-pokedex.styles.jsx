@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const ClosedPokedexInterfaceContainer = styled.div`
   width: 400px;
@@ -10,7 +10,7 @@ export const ClosedPokedexInterfaceContainer = styled.div`
   margin-top: 20px;
   border-style: solid;
   background-color: red;
-  border-radius: 0px 30px; 
+  border-radius: 0px 30px;
 `;
 
 export const PokedexTopHeaderContainer = styled.div`

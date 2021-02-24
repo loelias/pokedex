@@ -29,10 +29,10 @@ export const fetchDetailsDataStartAsync = (value) => {
 
     axios
       .get(DETAILS_API_URL + value)
-		  .then( res => {
-			  const apiData = res.data;
-			  dispatch(fetchDetailsDataSuccess(apiData));
-		  })
-		  .catch(error => dispatch(fetchDetailsDataFailure(error.message)));
+      .then(res => {
+        const apiData = res.data;
+        dispatch(fetchDetailsDataSuccess(apiData));
+      })
+      .catch(error => dispatch(fetchDetailsDataFailure(error.message)));
   };
 };

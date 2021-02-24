@@ -1,13 +1,12 @@
-import React from 'react';
-import { connect } from 'react-redux';
+import React from "react";
+import { connect } from "react-redux";
 
-import ClosedPokedex from '../../components/closed-pokedex/closed-pokedex.component';
+import ClosedPokedex from "../../components/closed-pokedex/closed-pokedex.component";
 
-import { HomePageContainer } from './homepage.styles';
+import { HomePageContainer } from "./homepage.styles";
 
-import { fetchDataStartAsync } from '../../redux/closedpokedex/closedpokedex.actions';
+import { fetchDataStartAsync } from "../../redux/closedpokedex/closedpokedex.actions";
 class HomePage extends React.Component {
-  
   componentDidMount() {
     const { fetchDataStartAsync } = this.props;
 
@@ -23,8 +22,8 @@ class HomePage extends React.Component {
   }
 }
 
-const mapDispatchToProps = dispatch => ({
-  fetchDataStartAsync: () => dispatch(fetchDataStartAsync())
-})
+const mapDispatchToProps = (dispatch) => ({
+  fetchDataStartAsync: () => dispatch(fetchDataStartAsync()),
+});
 
 export default connect(null, mapDispatchToProps)(HomePage);

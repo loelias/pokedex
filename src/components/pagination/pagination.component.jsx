@@ -16,27 +16,23 @@ export default function Pagination() {
   const pageNumbers = useSelector(selectPageNumbers);
   const dispatch = useDispatch();
 
-  if(pageNumbers.length == 0) {
-    for(let i = 1; i <= Math.ceil(pokemonData.length / itemsPerPage); i++) {
-      pageNumbers.push(i)
+  if (pageNumbers.length == 0) {
+    for (let i = 1; i <= Math.ceil(pokemonData.length / itemsPerPage); i++) {
+      pageNumbers.push(i);
     }
   }
-  
+
   const handleClick = (event) => {
-    dispatch(setCurrentPage(parseInt(event.target.innerHTML)))
-  }
+    dispatch(setCurrentPage(parseInt(event.target.innerHTML)));
+  };
 
   return (
     <PaginationContainer>
-      {
-        pageNumbers.map(number => (
-          <PaginationButton 
-          key={number}
-          onClick={handleClick}
-          >{ number }</PaginationButton>
-        ))
-      }
-      
+      {pageNumbers.map((number) => (
+        <PaginationButton key={number} onClick={handleClick}>
+          {number}
+        </PaginationButton>
+      ))}
     </PaginationContainer>
   );
 }
