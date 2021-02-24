@@ -11,7 +11,7 @@ export const LeftDetailsContentContainer = styled.div`
 `;
 
 export const NameNumberContainer = styled.div`
-	margin-top: 100px;
+  margin-top: 10px;
   width: 85%;
   height: 300px;
   display: flex;
@@ -38,7 +38,8 @@ export const TypesContainer = styled.div`
 `;
 
 export const PhysicalContainer = styled.div`
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   width: 95%;
   height: 50px;
   display: flex;
@@ -100,4 +101,37 @@ export const PokemonContent = styled.span`
   font-weight: bold;
   font-size: 20px;
   letter-spacing: 4px;
+`;
+
+export const PokedexTopHeaderContainer = styled.div`
+  display: flex;
+  border-bottom: 3px solid black;
+  box-shadow: -2px 5px 5px black;
+  width: 100%;
+  height: 80px;
+  border-radius: 0px 30px 0px 0px;
+`;
+
+export const PokedexBigCircleElement = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  margin-left: 30px;
+  border-radius: 50px;
+`;
+
+export const PokedexInnerCircleElement = styled.div`
+  display: flex;
+  width: 90%;
+  height: 90%;
+  background-color: lightblue;
+  border-radius: 50px;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;

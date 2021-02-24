@@ -1,5 +1,6 @@
 import {React } from 'react';
 import { useSelector, useDispatch } from "react-redux";
+import { useHistory } from 'react-router-dom';
 
 import { selectDetailsData ,selectIsHoveringImage } from "../../redux/openedpokedex/openedpokedex.selectors";
 import { setOnMouseOverImage } from "../../redux/openedpokedex/openedpokedex.actions";
@@ -13,14 +14,19 @@ import {
   PhysicalContainer,
   PhysicalContent,
   PokemonContent,
+	PokedexTopHeaderContainer,
+	PokedexBigCircleElement,
+	PokedexInnerCircleElement
 } from './leftside-content.styles';
 
 export default function LeftSideContent() {
 
 	const isHoveringImage = useSelector(selectIsHoveringImage);
 	const {id, height, name, sprites, types, weight} = useSelector(selectDetailsData, [isHoveringImage]);
+  const history = useHistory();
 	
 	const dispatch = useDispatch();
+	
 
 	const handleMouseEnter = (event) => {
 		event.target.classList.add("hover");
@@ -36,11 +42,20 @@ export default function LeftSideContent() {
 		dispatch(setOnMouseOverImage(value));
 	};
 
-	// function abilitiesMap()
+	function handleClick() {
+    history.push('/');
+  }
 
 
 	return (
     <LeftDetailsContentContainer>
+			<PokedexTopHeaderContainer>
+				<PokedexBigCircleElement>
+					<PokedexInnerCircleElement
+						onClick={handleClick}
+					/>
+				</PokedexBigCircleElement>
+			</PokedexTopHeaderContainer>
       <NameNumberContainer>
         <BackgroundImage
           className="image"
@@ -79,61 +94,3 @@ export default function LeftSideContent() {
     </LeftDetailsContentContainer>
   );
 }
-
-// onMouseEnter={() => setOnMouseOverImage()}
-// onMouseLeave={() => setOnMouseOutImage()}
-// imageUrl={ 
-// 	!sprites ? 
-// 		"" : 
-// 		isHoveringImage ? sprites.back_default : sprites.front_default} 
-
-// const LeftSideContent = ({ isHoveringImage, sprites, abilities, dispatch, history }) => (
-// 	<LeftDetailsContentContainer>
-// 		<NameNumberContainer>
-//   		<BackgroundImage 
-// 				className='image'
-// 				imageUrl={ 
-// 					!sprites ? "" : sprites.front_default} 
-// 			/>
-
-// 			{abilities && abilities.map((abilityObject) => (
-// 				<PokemonContent key={abilityObject.slot}{...abilityObject}>
-// 					{abilityObject.ability.name}
-// 				</PokemonContent>
-// 			))}
-
-// 			<PokemonContent>
-// 			</PokemonContent>
-//   	</NameNumberContainer>
-
-// 		<TypesContainer>
-// 			<TypeContent>
-// 				World
-// 			</TypeContent>
-// 		</TypesContainer>
-
-// 		<PhysicalContainer>
-// 			<PhysicalContent>
-// 				!!!!
-// 			</PhysicalContent>
-// 		</PhysicalContainer>		
-// 	</LeftDetailsContentContainer> 
-// );
-
-// // const mapStateToProps = createStructuredSelector({
-// // 	isHoveringImage: selectIsHoveringImage,
-// // })
-
-// // const mapDispatchToProps = dispatch => ({
-// //   setOnMouseOverImage: () => dispatch(setOnMouseOverImage()),
-// //   setOnMouseOutImage: () => dispatch(setOnMouseOutImage()),
-// // });
-
-// // export default withRouter(
-// // 	connect(
-// // 		mapStateToProps,
-// // 		mapDispatchToProps)(LeftSideContent));
-
-// // export default connect(mapStateToProps, mapDispatchToProps)(LeftSideContent)
-
-// export default LeftSideContent;

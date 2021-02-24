@@ -16,3 +16,28 @@ export const selectIsDataLoaded = createSelector(
   [selectClosedPokedex],
   closedpokedex => !!closedpokedex.data
 );
+
+export const selectCurrentPage = createSelector(
+  [selectClosedPokedex],
+  closedpokedex => closedpokedex.currentPage
+);
+
+export const selectItemsPerPage = createSelector(
+  [selectClosedPokedex],
+  closedpokedex => closedpokedex.itemsPerPage
+);
+
+export const selectPageNumbers = createSelector(
+  [selectClosedPokedex],
+  closedpokedex => closedpokedex.pageNumbers
+);
+
+export const selectIndexOfLastPokemon = createSelector(
+  [selectClosedPokedex],
+  closedpokedex => closedpokedex.indexOfLastPokemon
+);
+
+export const selectIndexOfFirstPokemon = createSelector(
+  [selectClosedPokedex],
+  closedpokedex => closedpokedex.indexOfFirstPokemon
+);

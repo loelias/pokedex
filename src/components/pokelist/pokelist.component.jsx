@@ -1,8 +1,4 @@
 import React from "react";
-import { connect } from "react-redux";
-import { createStructuredSelector } from "reselect";
-
-import { selectData } from "../../redux/closedpokedex/closedpokedex.selectors";
 
 import ListItem from '../../components/list-item/list-item.component';
 
@@ -16,8 +12,4 @@ const PokeList = ({ data }) => (
   </PokeListContainer>
 );
 
-const mapStateToProps = createStructuredSelector({
-  data: selectData,
-});
-
-export default connect(mapStateToProps)(PokeList);
+export default (PokeList);

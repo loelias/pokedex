@@ -6,8 +6,6 @@ import ClosedPokedex from '../../components/closed-pokedex/closed-pokedex.compon
 import { HomePageContainer } from './homepage.styles';
 
 import { fetchDataStartAsync } from '../../redux/closedpokedex/closedpokedex.actions';
-
-
 class HomePage extends React.Component {
   
   componentDidMount() {

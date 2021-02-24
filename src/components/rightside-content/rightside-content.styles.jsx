@@ -22,10 +22,13 @@ export const CloseContainer = styled.div`
   border-radius: 50px;
   margin-bottom: 1px;
   font-size: 20px;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const AbilitiesContainer = styled.div`
-  margin-top: 30px;
   width: 95%;
   height: 100px;
   display: flex;
@@ -39,7 +42,8 @@ export const AbilitiesContainer = styled.div`
 
 export const BaseStatsContainer = styled.div`
   width: 95%;
-  height: 300px;
+  height: 250px;
+  margin-bottom: 50px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;

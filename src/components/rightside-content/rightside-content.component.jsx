@@ -1,5 +1,5 @@
 import {React } from 'react';
-import { connect, useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { useHistory } from 'react-router-dom';
 
 import { selectDetailsData } from "../../redux/openedpokedex/openedpokedex.selectors";
@@ -7,11 +7,9 @@ import { selectDetailsData } from "../../redux/openedpokedex/openedpokedex.selec
 import {
   RightDetailsContentContainer,
   CloseContainer,
-  DescriptionContainer,
   AbilitiesContainer,
   BaseStatsContainer,
   AbilitiesContent,
-  DescriptionContent,
   BaseStatsContent
 } from './rightside-content.styles';
 
@@ -43,8 +41,13 @@ export default function RightSideContent() {
 				  </AbilitiesContent>
         ))}
       </AbilitiesContainer>
-
+      
+      
       <BaseStatsContainer>
+        <BaseStatsContent>
+          BASE STATS
+        </BaseStatsContent>
+
         {stats && stats.map((statObject) => (
           <BaseStatsContent key={statObject.stat.name}{...statObject}>
             {statObject.stat.name.toUpperCase()}<br/>
@@ -57,8 +60,3 @@ export default function RightSideContent() {
     </RightDetailsContentContainer>
   );
 }
-
-
-// {abilities && abilities.map((abilityObject) => (
-//   <AbilitiesContent key={abilityObject.slot}{...abilityObject}>
-//     {abilityObject.ability.name.toUpperCase()}

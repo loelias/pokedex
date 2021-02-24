@@ -11,7 +11,7 @@ const ListItem = ({ entry_number, pokemon_species, history }) => (
   <ListItemContainer
     onClick={() => history.push(`/pokemon/${entry_number}`)}
   >
-		<ContentNumber># { entry_number }</ContentNumber>
+		<ContentNumber>#{ entry_number }</ContentNumber>
 		<ContentName>{ pokemon_species.name.toUpperCase()}</ContentName>
   </ListItemContainer>
 );

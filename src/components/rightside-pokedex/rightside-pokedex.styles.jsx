@@ -10,4 +10,5 @@ export const RightSidePokedexInterfaceContainer = styled.div`
   justify-content: center;
   background-color: red;
   border: 2px solid black;
+  border-radius: 0px 0px 30px 0px;
 `;

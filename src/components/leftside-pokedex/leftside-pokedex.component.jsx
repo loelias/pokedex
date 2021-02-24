@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
-import { selectDetailsData, selectIsHoveringImage } from "../../redux/openedpokedex/openedpokedex.selectors";
+import { selectDetailsData } from "../../redux/openedpokedex/openedpokedex.selectors";
 
 import LeftSideContent from '../../components/leftside-content/leftside-content.component';
 

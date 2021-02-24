@@ -18,6 +18,16 @@ export const fetchDataFailure = errorMessage => ({
   payload: errorMessage
 });
 
+export const setPageNumbers = value => ({
+  type: ClosedPokedexActionTypes.SET_PAGENUMBER_ACTION,
+  payload: value
+});
+
+export const setCurrentPage = value => ({
+  type: ClosedPokedexActionTypes.SET_CURRENTPAGE_ACTION,
+  payload: value
+});
+
 export const fetchDataStartAsync = () => {
   return dispatch => {
     dispatch(fetchDataStart());
