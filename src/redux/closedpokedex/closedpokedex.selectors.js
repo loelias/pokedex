@@ -41,3 +41,13 @@ export const selectIndexOfFirstPokemon = createSelector(
   [selectClosedPokedex],
   closedpokedex => closedpokedex.indexOfFirstPokemon
 );
+
+export const selectCurrentItems = createSelector(
+  [selectClosedPokedex],
+  closedpokedex => closedpokedex.currentItems
+);
+
+export const selectSearchField = createSelector(
+  [selectClosedPokedex],
+  closedpokedex => closedpokedex.searchField
+);

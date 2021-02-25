@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const PaginationContainer = styled.div`
-  width: 80%;
+  width: auto;
   height: 25px;
   display: flex;
   flex-wrap: wrap;
@@ -12,6 +12,7 @@ export const PaginationContainer = styled.div`
   border: 1px solid grey;
   background-color: lightgrey;
   margin-top: 20px;
+  padding: 5px 5px 5px 5px;
   border-radius: 10px;
   box-shadow: 1px 1px 1px;
 `;
@@ -28,7 +29,7 @@ export const PaginationButton = styled.div`
   border-radius: 10px;
   text-weigth: 900;
   color: white;
-  margin: 2px 0 2px 0;
+  margin: 2px 2px 2px 2px;
   font-family: "VT323", monospace;
   box-shadow: 1px 1px 1px;
 

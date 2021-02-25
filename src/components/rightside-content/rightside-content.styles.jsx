@@ -26,6 +26,7 @@ export const CloseContainer = styled.div`
 
   &:hover {
     cursor: pointer;
+    color: white;
   }
 `;
 

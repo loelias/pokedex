@@ -126,6 +126,10 @@ export const PokedexBigCircleElement = styled.div`
   margin: 10px 0px 0px 30px;
   margin-left: 20px;
   border-radius: 50px;
+
+  &:hover {
+    background-color: yellow;
+  }
 `;
 
 export const PokedexInnerCircleElement = styled.div`
@@ -138,13 +142,13 @@ export const PokedexInnerCircleElement = styled.div`
   color: white;
   width: 90%;
   height: 90%;
-  background-color: #ff4d4d;
+  background-color: #356bbc;
   border-radius: 50px;
   margin-left: 1px;
 
   &:hover {
     cursor: pointer;
-    color: grey;
+    color: yellow;
   }
 `;
 

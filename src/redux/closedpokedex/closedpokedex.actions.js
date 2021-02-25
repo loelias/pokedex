@@ -28,6 +28,16 @@ export const setCurrentPage = value => ({
   payload: value
 });
 
+export const setCurrentItems = value => ({
+  type: ClosedPokedexActionTypes.SET_CURRENTITEMS_ACTION,
+  payload: value
+});
+
+export const setSearchField = value => ({
+  type: ClosedPokedexActionTypes.SET_SEARCHFIELD_ACTION,
+  payload: value
+});
+
 export const fetchDataStartAsync = () => {
   return dispatch => {
     dispatch(fetchDataStart());

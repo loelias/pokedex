@@ -1,8 +1,13 @@
 import { React } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 
 import { selectDetailsData } from "../../redux/openedpokedex/openedpokedex.selectors";
+
+import {
+  setSearchField,
+  setPageNumbers,
+} from "../../redux/closedpokedex/closedpokedex.actions";
 
 import {
   RightDetailsContentContainer,
@@ -16,10 +21,14 @@ import {
 export default function RightSideContent() {
   const { abilities, stats } = useSelector(selectDetailsData);
 
+  const dispatch = useDispatch();
+
   const history = useHistory();
 
   function handleClick() {
     history.push("/");
+    dispatch(setSearchField(""));
+    dispatch(setPageNumbers([]));
   }
 
   return (

@@ -6,6 +6,7 @@ const INITIAL_STATE = {
   itemsPerPage: 100,
   pageNumbers: [],
   currentItems: [],
+  searchField: "",
   indexOfLastPokemon: null,
   indexOfFirstPokemon: null,
   isFetching: false,
@@ -40,6 +41,16 @@ const closedPokedexReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         currentPage: action.payload
+      };
+    case ClosedPokedexActionTypes.SET_CURRENTITEMS_ACTION:
+      return {
+        ...state,
+        currentItems: action.payload
+      };
+    case ClosedPokedexActionTypes.SET_SEARCHFIELD_ACTION:
+      return {
+        ...state,
+        searchField: action.payload
       };
     default:
       return state;

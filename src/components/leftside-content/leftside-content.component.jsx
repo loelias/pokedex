@@ -6,7 +6,13 @@ import {
   selectDetailsData,
   selectIsHoveringImage,
 } from "../../redux/openedpokedex/openedpokedex.selectors";
+
 import { setOnMouseOverImage } from "../../redux/openedpokedex/openedpokedex.actions";
+
+import {
+  setSearchField,
+  setPageNumbers,
+} from "../../redux/closedpokedex/closedpokedex.actions";
 
 import pokedexLogo from "../../assets/retropokedex.png";
 
@@ -55,6 +61,8 @@ export default function LeftSideContent() {
 
   function handleClick() {
     history.push("/");
+    dispatch(setSearchField(""));
+    dispatch(setPageNumbers([]));
   }
 
   return (
