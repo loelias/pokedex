@@ -126,9 +126,11 @@ export const PokedexBigCircleElement = styled.div`
   margin: 10px 0px 0px 30px;
   margin-left: 20px;
   border-radius: 50px;
+  box-shadow: 2px 2px 8px black;
 
   &:hover {
     background-color: yellow;
+    box-shadow: 2px 2px 8px yellow;
   }
 `;
 
