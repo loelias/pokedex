@@ -12,4 +12,5 @@ export const RightSidePokedexInterfaceContainer = styled.div`
   border: 2px solid black;
   border-radius: 0px 0px 30px 0px;
   box-shadow: 3px 3px 5px black;
+  align-self: flex-end;
 `;

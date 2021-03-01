@@ -12,7 +12,7 @@ export const PaginationContainer = styled.div`
   border: 1px solid grey;
   background-color: lightgrey;
   margin-top: 20px;
-  padding: 5px 5px 5px 5px;
+  padding: 6px 6px 6px 6px;
   border-radius: 10px;
   box-shadow: 1px 1px 1px;
 `;
