@@ -86,6 +86,10 @@ export const AbilitiesContent = styled.span`
     border: 1px solid black;
   }
 
+  &:nth-child(3) {
+    background-color: #ccffcc;
+  }
+
   &:last-child {
     background-color: #9370b5;
   }
