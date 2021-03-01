@@ -49,9 +49,6 @@ export default function ClosedPokedex() {
     indexOfLastPokemon
   );
 
-  console.log(filteredItems);
-  console.log(searchField);
-
   function NumberOfPages() {
     for (let i = 1; i <= Math.ceil(filteredItems.length / itemsPerPage); i++) {
       pageNumbers.push(i);

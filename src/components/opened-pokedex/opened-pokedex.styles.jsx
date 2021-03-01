@@ -7,7 +7,7 @@ export const OpenedPokedexInterfaceContainer = styled.div`
   justify-content: center;
   margin-top: 20px;
   box-sizing: border-box;
-  
+
   @media only screen and (min-width: 320px) and (max-width: 480px) {
     width: 50%;
     heigth: 50%;
@@ -20,14 +20,3 @@ export const OpenedPokedexInterfaceContainer = styled.div`
     margin-top: 50px;
   }
 `;
-
-// export const OpenedPokedexInterfaceContainer = styled.div`
-//   width: 800px;
-//   height: 600px;
-//   display: flex;
-//   flex-wrap: wrap;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: flex-end;
-//   margin-top: 20px;
-// `;
